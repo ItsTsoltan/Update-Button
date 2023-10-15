@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Field Example</title>
+    <style>
+        body {
+            background-color: rgb(93, 71, 93);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #display {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputField">
+    <div id="display"></div>
+    <div>
+        <button onclick="updateDisplay()">Dokmeye Update</button>
+    </div>
+
+    <script>
+        function updateDisplay() {
+            const inputField = document.getElementById('inputField');
+            const display = document.getElementById('display');
+            const inputValue = inputField.value;
+
+            display.textContent = inputValue;
+        }
+    </script>
+</body>
+</html>
